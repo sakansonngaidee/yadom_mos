@@ -1,12 +1,14 @@
 import './App.css';
-import HomePage from './components/pages/HomePage';
+import MainLayout from '../src/assets/components/layout/MainLayout.jsx';
+
+
 
 function App() {
 
 
   return (
     <>
-      <HomePage />
+      <MainLayout />
     </>
   )
 }
