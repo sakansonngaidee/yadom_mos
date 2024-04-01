@@ -8,6 +8,9 @@ export default {
     extend: {
       scale: {
         '175': '1.75',
+      },
+      fontFamily: {
+        custom:["Kanit", "sans-serif"],
       }
     },
   },
