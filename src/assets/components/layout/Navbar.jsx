@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
+import { TiFlag } from "react-icons/ti";
 import Logo from "../../png/logo.png";
 
 export default function Navbar() {
@@ -18,7 +19,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <div className="flex cursor-pointer items-center">
                     <img
-                        className="w-[4.5rem]"
+                        className="w-[3.5rem]"
                         src={Logo} />
                 </div>
 
@@ -29,11 +30,14 @@ export default function Navbar() {
                     {
                         isOpen ? <XMarkIcon color="white" /> : <Bars3BottomRightIcon color="white"/>
                     }
-
                 </div>
 
                 {/* Nav Link */}
                 <ul className={`md:flex md:items-center pt-3 absolute md:static  text-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${isOpen ? ' top-[6.3rem]' : 'top-[-490px]'}`}>
+                    <div className="flex rounded-xl border-slate-300 border-[0.1rem] p-2 justify-center items-center">
+                        <TiFlag/>
+                        TH
+                    </div>
                     {
                         Links.map((link, index) => {
                             return (
