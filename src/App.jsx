@@ -1,14 +1,8 @@
-import './App.css';
-import MainLayout from '../src/assets/components/layout/MainLayout.jsx';
-
-
+import "./App.css";
+import MainLayout from "./components/layout/MainLayout.jsx";
 
 function App() {
-
-
-  return (
-      <MainLayout />
-  )
+  return <MainLayout />;
 }
 
-export default App
+export default App;
