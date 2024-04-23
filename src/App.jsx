@@ -1,8 +1,14 @@
 import "./App.css";
-import MainLayout from "./components/layout/MainLayout.jsx";
+import { Home } from "./pages/Home.jsx";
+// import Navbar from "./components/Navbar.jsx";
 
 function App() {
-  return <MainLayout />;
+  return (
+    <>
+      {/* <Navbar /> */}
+      <Home />;
+    </>
+  );
 }
 
 export default App;

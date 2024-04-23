@@ -2,19 +2,18 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { TiFlag } from "react-icons/ti";
-import Logo from "../../assets/Logo.png";
-
+import { Logo } from "../assets/Logo.png";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   let Links = [
-    { path: "/", name: "Home" },
-    { path: "/product", name: "Product" },
-    { path: "/contact", name: "Contact" },
+    { path: "/", text: "หน้าหลัก" },
+    { path: "product", text: "สินค้า" },
+    { path: "contact", text: "ติดต่อเรา" },
   ];
 
   return (
-    <div className="my-5 shadow-md w-11/12 bg-black rounded-3xl border-slate-300 border-[0.1rem] absolute ">
+    <nav className="my-5 shadow-md w-11/12 bg-black rounded-3xl border-slate-300 border-[0.1rem] absolute ">
       <div className="px-6 pb-3  md:flex justify-between items-center ">
         {/* Logo */}
         <div className="flex cursor-pointer items-center">
@@ -43,15 +42,13 @@ export default function Navbar() {
           </div>
           {Links.map((link, index) => {
             return (
-              <li
-                key={index}
-                className="font-semibold my-7 md:my-0 md:ml-8 py-2 px-2 transition duration-0 md:duration-150 hover:md:scale-125">
-                <Link to={link.path}>{link.name}</Link>
-              </li>
+              <Link to={link.path} key={index}>
+                {link.text}
+              </Link>
             );
           })}
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }
